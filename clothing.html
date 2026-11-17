@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Threadline — Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="hdr"></div>
+    <main id="view"></main>
+    <div id="ftr"></div>
+    <template id="v-home">
+        <header class="hero">
+            <div class="hbg"></div>
+            <div class="wrap">
+                <h1>Wear Your Style, Define Your Identity.</h1>
+                <p>Hoodies, denim, jackets and traditional wear — delivered across Pakistan.</p><a class="btn"
+                    href="#/shop">Shop Now</a><small>Hero art is a placeholder — add real model photography to style.css
+                    (.hbg).</small>
+            </div>
+        </header>
+        <section class="sec">
+            <div class="wrap">
+                <h2 class="rv">Shop by category</h2>
+                <div class="cats" id="cats"></div>
+            </div>
+        </section>
+        <section class="sec" style="padding-top:0">
+            <div class="wrap">
+                <h2 class="rv">Featured products</h2>
+                <p class="sub">Our most-loved pieces right now.</p>
+                <div class="grid" id="feat"></div>
+            </div>
+        </section>
+        <section class="promo">
+            <h2 id="bn" class="rv"></h2>
+            <p style="margin:10px 0 20px">Prices shown are already discounted.</p><a class="btn b" href="#/shop">Browse
+                the sale</a>
+        </section>
+        <section class="sec">
+            <div class="wrap">
+                <h2 class="rv">Trending: New arrivals</h2>
+                <div class="grid" id="new"></div>
+            </div>
+        </section>
+        <section class="sec" id="contact" style="padding-top:0">
+            <div class="wrap">
+                <div class="ord rv" id="ordbox"></div>
+            </div>
+        </section>
+    </template>
+    <template id="v-shop">
+        <div class="wrap sec">
+            <h2 id="t">Collections</h2>
+            <p class="sub" id="n"></p>
+            <div class="chips" id="chips"></div>
+            <div class="grid" id="g"></div>
+        </div>
+    </template>
+    <template id="v-product">
+        <div class="wrap" id="pd"></div>
+    </template>
+    <template id="v-cart">
+        <div class="wrap">
+            <div id="done"></div>
+            <div class="cl" id="cl">
+                <div>
+                    <h2 style="margin-bottom:14px">Your cart</h2>
+                    <div id="items"></div>
+                </div>
+                <form class="box" id="f">
+                    <h3>Checkout</h3><label>Full name</label><input name="name" required><label>Mobile
+                        number</label><input name="phone" required pattern="[0-9+ -]{10,16}"
+                        placeholder="03XX XXXXXXX"><label>Delivery address</label><textarea name="addr" rows="2"
+                        required></textarea>
+                    <div class="two">
+                        <div><label>City</label><input name="city" required></div>
+                        <div><label>Postal code</label><input name="zip" required></div>
+                    </div>
+                    <p style="margin:16px 0"><b>Total: <span id="tot"></span></b></p><button class="btn"
+                        style="width:100%">Place Order</button>
+                    <p class="meta" style="margin-top:8px">Payment: cash on delivery.</p>
+                </form>
+            </div>
+        </div>
+    </template>
+    <template id="v-track">
+        <div class="wrap sec">
+            <h2>Track your order</h2>
+            <p class="sub">Enter the Order ID you received after checkout.</p>
+            <form id="f" style="display:flex;gap:10px;max-width:520px"><input id="oid" placeholder="e.g. THL-4F9K2A"
+                    required><button class="btn">Track</button></form>
+            <div id="r" style="margin-top:28px"></div>
+        </div>
+    </template>
+    <template id="v-admin">
+        <div class="wrap sec" id="app"></div>
+    </template>
+    <template id="v-policy">
+        <div class="wrap sec" style="max-width:760px">
+            <h2 id="privacy">Privacy Policy</h2>
+            <p class="sub">We collect your name, phone number and address only to deliver your order. We never sell your
+                data.</p>
+            <h2 id="terms">Terms and Conditions</h2>
+            <p class="sub">Orders are confirmed by phone or WhatsApp. Prices are in PKR and may change without notice.
+                Delivery usually takes 3–7 working days.</p>
+            <h2 id="returns">Return and Exchange Policy</h2>
+            <p class="sub">Unworn items with tags can be exchanged within 7 days of delivery. Contact us on WhatsApp
+                with your Order ID. (Edit this text with your own policy.)</p>
+        </div>
+    </template>
+    <script src="app.js"></script>
+</body>
+
+</html>
